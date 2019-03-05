@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Post;
+use App\Posts;
 use Illuminate\Http\Request;
 
-class PostController extends Controller
+class PostsController extends Controller
 {
     public function index()
     {
-        return response()->json(Post::get(),200);
+        return response()->json(Posts::get(),200);
     }
 }

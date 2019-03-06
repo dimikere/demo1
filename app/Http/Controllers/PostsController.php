@@ -17,9 +17,9 @@ class PostsController extends Controller
         return response()->json(Posts::find($id),200);
     }
 
-    public function store(Posts $posts)
+    public function store(Request $request)
     {
-        $post = Posts::create($posts->all());
+        $post = Posts::create($request->all());
         return response()->json($post,200);
     }
 }
